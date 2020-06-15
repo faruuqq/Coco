@@ -6,27 +6,6 @@
 //  Copyright © 2020 Apple Academy. All rights reserved.
 //
 
-// frame size 11pro = w: 750 h: 1334
-// frame size 11 = w:414 h: 896
-
-/*anchor point: 0.5 , 0.5
- minX: -207.0
- midX: 0.0
- maxX: 207.0
- minY: -448.0
- midY: 0.0
- maxY: 448.0
- */
-
-/*anchor point: 0.0, 0.0
- minX: -0.0
- midX: 207.0
- maxX: 414.0
- minY: -0.0
- midY: 448.0
- maxY: 896.0
- */
-
 import SpriteKit
 import GameplayKit
 
@@ -44,8 +23,22 @@ class GameScene: SKScene {
         return background
     }()
     
+    let audio: SKAudioNode = {
+        let audio = SKAudioNode(fileNamed: "GameSceneAudio.mp3")
+        audio.autoplayLooped = true
+        return audio
+    }()
+    
+    let buttonSound: SKAudioNode = {
+        let audio = SKAudioNode(fileNamed: "ButtonClicked.mp3")
+        audio.autoplayLooped = false
+        return audio
+    }()
+    
+    //MARK: - DidMove
     override func didMove(to view: SKView) {
         layout()
+        sounds()
     }
     
     func layout() {
@@ -64,17 +57,31 @@ class GameScene: SKScene {
         playBtn.run(SKAction.repeatForever(sequenceAction))
     }
     
+    //MARK: - Audio
+    func sounds() {
+        addChild(audio)
+        let adjustVolume = SKAction.changeVolume(to: 0.3, duration: 0)
+        audio.run(SKAction.group([adjustVolume, SKAction.play()]))
+        
+        addChild(buttonSound)
+    }
+    
     //MARK: - Touch Began
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard touches.first != nil else { return }
         
         if playBtn.frame.contains((touches.first?.location(in: self))!) {
-            let story1 = Story1()
-            story1.scaleMode = scaleMode
-            let transition = SKTransition.fade(withDuration: 0.5)
-            self.view?.presentScene(story1, transition: transition)
+            buttonSound.run(SKAction.play())
         }
-        
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if playBtn.frame.contains((touches.first?.location(in: self))!) {
+            self.run(SKAction.sequence([SKAction.wait(forDuration: 1.2), SKAction.run {
+                let story1 = Story1()
+                let transition = SKTransition.push(with: .up, duration: 1)
+                self.view?.presentScene(story1, transition: transition)
+                }]))
+        }
+    }
 }

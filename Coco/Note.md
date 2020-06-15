@@ -18,3 +18,10 @@
  midY: 448.0
  maxY: 896.0
  */
+ 
+ PR:
+ - Story 1 : Awan
+ - Story 4-5 : Puzzle
+ - Story 3 : Replace the asset
+ - Story 8 : button not working
+ 
