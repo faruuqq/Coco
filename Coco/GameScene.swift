@@ -66,7 +66,7 @@ class GameScene: SKScene {
         addChild(buttonSound)
     }
     
-    //MARK: - Touch Began
+    //MARK: - Touch Interaction
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard touches.first != nil else { return }
         

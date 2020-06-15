@@ -31,6 +31,9 @@
 		2AE6295B249391F400205608 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6295A249391F400205608 /* Story2.swift */; };
 		2AE6295F2493A06300205608 /* Story3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6295E2493A06300205608 /* Story3.swift */; };
 		2AE6296124940B4300205608 /* Story4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6296024940B4300205608 /* Story4.swift */; };
+		2AE7FD7B24979D07002378A5 /* StoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD7A24979D07002378A5 /* StoryVC.swift */; };
+		2AE7FD7D24979E6C002378A5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD7C24979E6C002378A5 /* CollectionViewCell.swift */; };
+		2AE7FD7F2497CC37002378A5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD7E2497CC37002378A5 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		2AE6295A249391F400205608 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
 		2AE6295E2493A06300205608 /* Story3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story3.swift; sourceTree = "<group>"; };
 		2AE6296024940B4300205608 /* Story4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story4.swift; sourceTree = "<group>"; };
+		2AE7FD7A24979D07002378A5 /* StoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVC.swift; sourceTree = "<group>"; };
+		2AE7FD7C24979E6C002378A5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2AE7FD7E2497CC37002378A5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				2AA74D3A24920F41007267F4 /* GameScene.sks */,
 				2AA74D3C24920F41007267F4 /* Actions.sks */,
 				2AA74D3E24920F41007267F4 /* GameScene.swift */,
+				2AE7FD7A24979D07002378A5 /* StoryVC.swift */,
+				2AE7FD7C24979E6C002378A5 /* CollectionViewCell.swift */,
+				2AE7FD7E2497CC37002378A5 /* Content.swift */,
 				2AE62956249357BA00205608 /* Story1.swift */,
 				2AE6295A249391F400205608 /* Story2.swift */,
 				2AE6295E2493A06300205608 /* Story3.swift */,
@@ -217,9 +226,12 @@
 				2AA74D3F24920F41007267F4 /* GameScene.swift in Sources */,
 				2A0262AE249708ED00EA0A0D /* Story4a.swift in Sources */,
 				2AE6295F2493A06300205608 /* Story3.swift in Sources */,
+				2AE7FD7F2497CC37002378A5 /* Content.swift in Sources */,
 				2AA74D4124920F41007267F4 /* GameViewController.swift in Sources */,
 				2AACB1B0249512F5005D64CD /* Story7.swift in Sources */,
+				2AE7FD7D24979E6C002378A5 /* CollectionViewCell.swift in Sources */,
 				2AACB1AE249502FA005D64CD /* Story6.swift in Sources */,
+				2AE7FD7B24979D07002378A5 /* StoryVC.swift in Sources */,
 				2AA74D3924920F41007267F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

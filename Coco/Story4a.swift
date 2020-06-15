@@ -10,8 +10,8 @@ import GameplayKit
 
 class Story4a: SKScene {
     
-    var gotSelectedA = false
-    var gotSelectedB = false
+    var assignedValueA = 0
+    var assignedValueB = 0
     var totalSelected = 0
     var assign1 = false
     var assign2 = false
@@ -40,16 +40,30 @@ class Story4a: SKScene {
         SKSpriteNode(imageNamed: "Puzzle (9)"),
     ]
     
+    let swapButton: SKSpriteNode = {
+        let btn = SKSpriteNode(imageNamed: "Swap Button")
+        btn.zPosition = 2
+        btn.setScale(0.5)
+        return btn
+    }()
+    
     override func didMove(to view: SKView) {
         self.size.width = 414
         self.size.height = 896
         layout()
     }
     
+    //MARK: - Layout
     func layout() {
         
         let midX = self.frame.midX
         let midY = self.frame.midY
+        
+        background.position = CGPoint(x: midX, y: midY)
+        addChild(background)
+        
+        swapButton.position = CGPoint(x: midX, y: self.frame.minY + 200)
+        addChild(swapButton)
         
         let puzzlePosition = [
         CGPoint(x: self.frame.midX - 120, y: self.frame.midY + 120),
@@ -62,12 +76,10 @@ class Story4a: SKScene {
         CGPoint(x: self.frame.midX, y: self.frame.midY - 120),
         CGPoint(x: self.frame.midX + 120, y: self.frame.midY - 120)
         ]
-        
-        background.position = CGPoint(x: midX, y: midY)
-        addChild(background)
-        
+ 
         for item in puzzle {
             item.setScale(0.4)
+            item.zPosition = 2
             addChild(item)
         }
         
@@ -87,16 +99,17 @@ class Story4a: SKScene {
         
     }
     
+    //MARK: - Touch Interaction
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let scaleBig = SKAction.scale(to: 0.42, duration: 0.5)
-        let scaleNormal = SKAction.scale(to: 0.4, duration: 0.5)
+        let scaleBig = SKAction.scale(to: 0.44, duration: 0.1)
+        let scaleNormal = SKAction.scale(to: 0.4, duration: 0.1)
         
         let touchLocation = (touches.first?.location(in: self))!
         
         //puzzle 1
         if puzzle[0].contains(touchLocation) {
-            if totalSelected <= 2 && assign1 != true {
+            if totalSelected < 2 && assign1 != true {
                 assign1 = true
                 print("assign 1 selected")
                 totalSelected += 1
@@ -112,14 +125,14 @@ class Story4a: SKScene {
             
          //puzzle 2
         } else if puzzle[1].contains(touchLocation) {
-            if totalSelected <= 2 && assign2 != true {
+            if totalSelected < 2 && assign2 != true {
                 assign2 = true
                 print("assign 2 selected")
                 totalSelected += 1
                 print("total selected = \(totalSelected)")
                 puzzle[1].run(scaleBig)
             } else if totalSelected <= 2 && assign2 != false {
-                assign1 = false
+                assign2 = false
                 print("assign 2 diselected")
                 totalSelected -= 1
                 print("total selected = \(totalSelected)")
@@ -128,7 +141,7 @@ class Story4a: SKScene {
             
         //puzzle 3
         } else if puzzle[2].contains(touchLocation) {
-            if totalSelected <= 2 && assign3 != true {
+            if totalSelected < 2 && assign3 != true {
                 assign3 = true
                 print("assign 3 selected")
                 totalSelected += 1
@@ -144,7 +157,7 @@ class Story4a: SKScene {
             
         //puzzle 4
         } else if puzzle[3].contains(touchLocation) {
-            if totalSelected <= 2 && assign4 != true {
+            if totalSelected < 2 && assign4 != true {
                 assign4 = true
                 print("assign 4 selected")
                 totalSelected += 1
@@ -160,7 +173,7 @@ class Story4a: SKScene {
             
         //puzzle 5
         } else if puzzle[4].contains(touchLocation) {
-            if totalSelected <= 2 && assign5 != true {
+            if totalSelected < 2 && assign5 != true {
                 assign5 = true
                 print("assign 5 selected")
                 totalSelected += 1
@@ -176,7 +189,7 @@ class Story4a: SKScene {
             
         //puzzle 6
         } else if puzzle[5].contains(touchLocation) {
-            if totalSelected <= 2 && assign6 != true {
+            if totalSelected < 2 && assign6 != true {
                 assign6 = true
                 print("assign 6 selected")
                 totalSelected += 1
@@ -192,7 +205,7 @@ class Story4a: SKScene {
             
         //puzzle 7
         } else if puzzle[6].contains(touchLocation) {
-            if totalSelected <= 2 && assign7 != true {
+            if totalSelected < 2 && assign7 != true {
                 assign7 = true
                 print("assign 7 selected")
                 totalSelected += 1
@@ -208,7 +221,7 @@ class Story4a: SKScene {
             
         //puzzle 8
         } else if puzzle[7].contains(touchLocation) {
-            if totalSelected <= 2 && assign8 != true {
+            if totalSelected < 2 && assign8 != true {
                 assign8 = true
                 print("assign 8 selected")
                 totalSelected += 1
@@ -224,7 +237,7 @@ class Story4a: SKScene {
             
         //puzzle 9
         } else if puzzle[8].contains(touchLocation) {
-            if totalSelected <= 2 && assign9 != true {
+            if totalSelected < 2 && assign9 != true {
                 assign9 = true
                 print("assign 9 selected")
                 totalSelected += 1
@@ -237,11 +250,15 @@ class Story4a: SKScene {
                 print("total selected = \(totalSelected)")
                 puzzle[8].run(scaleNormal)
             }
+            
+        //swap button
+        } else if swapButton.contains(touchLocation) {
+            
         }
     }
     
-//    override func update(_ currentTime: TimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
 //        print("update")
-//    }
+    }
     
 }

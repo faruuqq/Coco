@@ -133,8 +133,10 @@ class Story8: SKScene {
         wellDone.run(SKAction.hide())
         addChild(wellDone)
         
+        //MARK: - Layout Next Button
         nextSceneBtn.position = CGPoint(x: midX, y: midY - 70)
         nextSceneBtn.run(SKAction.hide())
+        nextSceneBtn.name = "moveToNext"
         addChild(nextSceneBtn)
     }
     
