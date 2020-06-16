@@ -18,7 +18,7 @@ class Story7: SKScene {
     
     let textContainer1: SKLabelNode = {
         let text = SKLabelNode(fontNamed: "Chalkduster")
-        text.text = "Therefore, he began to look for food and find ways how to cook it."
+        text.text = "After exploring the island, he began to look for food and find ways how to cook it."
         text.fontSize = 20
         text.fontColor = .white
         text.numberOfLines = 0

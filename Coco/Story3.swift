@@ -25,7 +25,7 @@ class Story3: SKScene {
     
     let textContainer: SKLabelNode = {
         let text = SKLabelNode()
-        let attributedText = NSMutableAttributedString(string: "Coco woke up on an island that was foreign to him. He felt confused, frightened, and panicked because he could not find anyone other than him on the island.", attributes: [NSAttributedString.Key.font : UIFont(name: "Chalkduster", size: 25)!])
+        let attributedText = NSMutableAttributedString(string: "Coco woke up on an island that was foreign to him. He felt confused, frightened, and panicked because he could not find anyone other than him on the island. Let's help him to find people", attributes: [NSAttributedString.Key.font : UIFont(name: "Chalkduster", size: 25)!])
         text.attributedText = attributedText
         text.numberOfLines = 0
         text.horizontalAlignmentMode = .center

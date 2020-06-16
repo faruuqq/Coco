@@ -81,4 +81,12 @@ class Story9: SKScene {
         moon.run(SKAction.moveTo(y: self.frame.maxY - 130, duration: 1))
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard touches.first != nil else { return }
+        
+        let story10 = Story10()
+        let transition = SKTransition.push(with: .up, duration: 1)
+        view?.presentScene(story10, transition: transition)
+    }
+    
 }
