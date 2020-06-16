@@ -71,8 +71,8 @@ class Story6: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard touches.first?.location(in: self) != nil else { return }
         
-        let story7 = Story7()
-        let transition = SKTransition.moveIn(with: .right, duration: 1)
-        view?.presentScene(story7, transition: transition)
+        let story14 = Story14()
+        let transition = SKTransition.moveIn(with: .down, duration: 1)
+        view?.presentScene(story14, transition: transition)
     }
 }

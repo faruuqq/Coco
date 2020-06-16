@@ -15,6 +15,7 @@
 		2A0262AA2496F77E00EA0A0D /* ThunderCrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A0262A92496F77E00EA0A0D /* ThunderCrack.mp3 */; };
 		2A0262AC2496FB6400EA0A0D /* HeavyRain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A0262AB2496FB6400EA0A0D /* HeavyRain.mp3 */; };
 		2A0262AE249708ED00EA0A0D /* Story4a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0262AD249708ED00EA0A0D /* Story4a.swift */; };
+		2A5C919B24989337009EEA22 /* Story14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C919A24989337009EEA22 /* Story14.swift */; };
 		2AA74D3924920F41007267F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA74D3824920F41007267F4 /* AppDelegate.swift */; };
 		2AA74D3B24920F41007267F4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2AA74D3A24920F41007267F4 /* GameScene.sks */; };
 		2AA74D3D24920F41007267F4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2AA74D3C24920F41007267F4 /* Actions.sks */; };
@@ -30,10 +31,12 @@
 		2AE6295924936F6100205608 /* Note.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6295824936F6100205608 /* Note.md */; };
 		2AE6295B249391F400205608 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6295A249391F400205608 /* Story2.swift */; };
 		2AE6295F2493A06300205608 /* Story3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6295E2493A06300205608 /* Story3.swift */; };
-		2AE6296124940B4300205608 /* Story4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6296024940B4300205608 /* Story4.swift */; };
+		2AE6296124940B4300205608 /* Story4-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6296024940B4300205608 /* Story4-old.swift */; };
 		2AE7FD7B24979D07002378A5 /* StoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD7A24979D07002378A5 /* StoryVC.swift */; };
 		2AE7FD7D24979E6C002378A5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD7C24979E6C002378A5 /* CollectionViewCell.swift */; };
 		2AE7FD7F2497CC37002378A5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD7E2497CC37002378A5 /* Content.swift */; };
+		2AE7FD812498216D002378A5 /* Story15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7FD802498216D002378A5 /* Story15.swift */; };
+		2AE7FD832498299F002378A5 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7FD822498299F002378A5 /* Rain.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,7 @@
 		2A0262A92496F77E00EA0A0D /* ThunderCrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThunderCrack.mp3; sourceTree = "<group>"; };
 		2A0262AB2496FB6400EA0A0D /* HeavyRain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HeavyRain.mp3; sourceTree = "<group>"; };
 		2A0262AD249708ED00EA0A0D /* Story4a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story4a.swift; sourceTree = "<group>"; };
+		2A5C919A24989337009EEA22 /* Story14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story14.swift; sourceTree = "<group>"; };
 		2AA74D3524920F41007267F4 /* Coco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA74D3824920F41007267F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA74D3A24920F41007267F4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -62,10 +66,12 @@
 		2AE6295824936F6100205608 /* Note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Note.md; sourceTree = "<group>"; };
 		2AE6295A249391F400205608 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
 		2AE6295E2493A06300205608 /* Story3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story3.swift; sourceTree = "<group>"; };
-		2AE6296024940B4300205608 /* Story4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story4.swift; sourceTree = "<group>"; };
+		2AE6296024940B4300205608 /* Story4-old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Story4-old.swift"; sourceTree = "<group>"; };
 		2AE7FD7A24979D07002378A5 /* StoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVC.swift; sourceTree = "<group>"; };
 		2AE7FD7C24979E6C002378A5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2AE7FD7E2497CC37002378A5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		2AE7FD802498216D002378A5 /* Story15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story15.swift; sourceTree = "<group>"; };
+		2AE7FD822498299F002378A5 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +127,15 @@
 				2AE62956249357BA00205608 /* Story1.swift */,
 				2AE6295A249391F400205608 /* Story2.swift */,
 				2AE6295E2493A06300205608 /* Story3.swift */,
-				2AE6296024940B4300205608 /* Story4.swift */,
+				2AE6296024940B4300205608 /* Story4-old.swift */,
 				2A0262AD249708ED00EA0A0D /* Story4a.swift */,
 				2AACB1AD249502FA005D64CD /* Story6.swift */,
+				2A5C919A24989337009EEA22 /* Story14.swift */,
+				2AE7FD802498216D002378A5 /* Story15.swift */,
 				2AACB1AF249512F5005D64CD /* Story7.swift */,
 				2AACB1B124958698005D64CD /* Story8.swift */,
 				2A02629A24967F6400EA0A0D /* Story9.swift */,
+				2AE7FD822498299F002378A5 /* Rain.sks */,
 				2AA74D4024920F41007267F4 /* GameViewController.swift */,
 				2AA74D4224920F41007267F4 /* Main.storyboard */,
 				2AA74D4524920F44007267F4 /* Assets.xcassets */,
@@ -196,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE7FD832498299F002378A5 /* Rain.sks in Resources */,
 				2AE6295924936F6100205608 /* Note.md in Resources */,
 				2AA74D4424920F41007267F4 /* Main.storyboard in Resources */,
 				2A02629E2496D22300EA0A0D /* GameSceneAudio.mp3 in Resources */,
@@ -219,7 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AACB1B224958698005D64CD /* Story8.swift in Sources */,
-				2AE6296124940B4300205608 /* Story4.swift in Sources */,
+				2AE6296124940B4300205608 /* Story4-old.swift in Sources */,
+				2A5C919B24989337009EEA22 /* Story14.swift in Sources */,
 				2AE6295B249391F400205608 /* Story2.swift in Sources */,
 				2AE62957249357BA00205608 /* Story1.swift in Sources */,
 				2A02629B24967F6400EA0A0D /* Story9.swift in Sources */,
@@ -233,6 +244,7 @@
 				2AACB1AE249502FA005D64CD /* Story6.swift in Sources */,
 				2AE7FD7B24979D07002378A5 /* StoryVC.swift in Sources */,
 				2AA74D3924920F41007267F4 /* AppDelegate.swift in Sources */,
+				2AE7FD812498216D002378A5 /* Story15.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

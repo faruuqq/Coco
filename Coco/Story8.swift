@@ -129,12 +129,12 @@ class Story8: SKScene {
         ikan.physicsBody?.contactTestBitMask = apiCategoryMask
         
         //MARK: - Layout Well Done
-        wellDone.position = CGPoint(x: midX, y: midY)
+        wellDone.position = CGPoint(x: midX, y: self.frame.maxY - 200)
         wellDone.run(SKAction.hide())
         addChild(wellDone)
         
         //MARK: - Layout Next Button
-        nextSceneBtn.position = CGPoint(x: midX, y: midY - 70)
+        nextSceneBtn.position = CGPoint(x: midX, y: midY + 170)
         nextSceneBtn.run(SKAction.hide())
         nextSceneBtn.name = "moveToNext"
         addChild(nextSceneBtn)
@@ -156,6 +156,7 @@ class Story8: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         guard touches.first != nil else { return }
         
         if kayu.contains((touches.first?.location(in: self))!) {

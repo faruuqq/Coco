@@ -11,6 +11,9 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+//    var viewController: UIViewController?
+//    let sceneViewController: UIViewController = self.view?.window?.rootViewController
+    
     let playBtn: SKSpriteNode = {
         let playBtn = SKSpriteNode(imageNamed: "Play_button")
         playBtn.setScale(0.15)
@@ -80,7 +83,10 @@ class GameScene: SKScene {
             self.run(SKAction.sequence([SKAction.wait(forDuration: 1.2), SKAction.run {
                 let story1 = Story1()
                 let transition = SKTransition.push(with: .up, duration: 1)
+//                let storyVC = StoryVC()
                 self.view?.presentScene(story1, transition: transition)
+//                self.viewController?.present(storyVC, animated: true, completion: nil)
+//                self.viewController.present(storyVC, animated: true, completion: nil)
                 }]))
         }
     }

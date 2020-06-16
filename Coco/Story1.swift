@@ -83,6 +83,7 @@ class Story1: SKScene {
         
         layout()
         animation()
+        emitter()
         
     }
     
@@ -143,6 +144,14 @@ class Story1: SKScene {
         ]))
         
         textContainer.run(fadeInLong)
+    }
+    
+    func emitter() {
+        let emitter = SKEmitterNode(fileNamed: "Rain")
+        emitter?.zPosition = 1
+        emitter?.position = CGPoint(x: self.frame.midX, y: self.frame.maxY)
+        emitter?.advanceSimulationTime(30)
+        addChild(emitter!)
     }
     
     //MARK: - Touch Began

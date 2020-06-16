@@ -23,6 +23,30 @@ class Story9: SKScene {
         return moon
     }()
     
+    let textContainer1: SKLabelNode = {
+        let text = SKLabelNode(fontNamed: "Chalkduster")
+        text.text = "Without realizing it, it turns out that time goes so fast. "
+        text.fontSize = 20
+        text.fontColor = .white
+        text.numberOfLines = 0
+        text.horizontalAlignmentMode = .center
+        text.lineBreakMode = .byWordWrapping
+        text.zPosition = 2
+        return text
+    }()
+    
+    let textContainer2: SKLabelNode = {
+        let text = SKLabelNode(fontNamed: "Chalkduster")
+        text.text = "It was getting late and Coco had to find a place to rest."
+        text.fontSize = 20
+        text.fontColor = .white
+        text.numberOfLines = 0
+        text.horizontalAlignmentMode = .center
+        text.lineBreakMode = .byWordWrapping
+        text.zPosition = 2
+        return text
+    }()
+    
     //MARK: - DidMove
     override func didMove(to view: SKView) {
         self.size.width = 414
@@ -42,6 +66,14 @@ class Story9: SKScene {
         
         moon.position = CGPoint(x: midX, y: self.frame.maxY - 40)
         addChild(moon)
+        
+        textContainer1.position = CGPoint(x: midX, y: self.frame.minY + 200)
+        textContainer1.preferredMaxLayoutWidth = self.size.width - 50
+        addChild(textContainer1)
+        
+        textContainer2.position = CGPoint(x: midX, y: textContainer1.frame.minY - 70)
+        textContainer2.preferredMaxLayoutWidth = self.size.width - 50
+        addChild(textContainer2)
         
     }
     
